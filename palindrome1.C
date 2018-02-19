@@ -1,12 +1,15 @@
 #include<stdio.h>
 #include<string.h>
-void main()
+int main()
 {
-char a[20];
+char a[20],s[20];
+  int b;
 printf("\n enter the string:");
 scanf("%s",a);
-b=strrev(a);
-if(a==b)
+strcpy(s,a);
+strrev(s);
+b=strcmp(a,s);
+if(b==0)
 {
 printf("\n the string are palindrome");
 }
@@ -14,4 +17,5 @@ else
 {
 printf("\n the string is not a palindrome");
 }
+  return 0;
 }
